@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Formulário de Contato</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Formulário de Contato</h1>
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Mensagem:</label>
+                <textarea id="message" required></textarea>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+        <div id="messageBox" class="message"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: lavender; /* Fundo do formulário */
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 400px; 
+    margin: auto; 
+    padding: 20px;
+    background-color: beige; /* Cor de fundo do container */
+    border: 1px solid lightgray;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 30px;
+    color: brown; /* Cor do cabeçalho */
+    margin-bottom: 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"], input[type="email"], textarea {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    width: 100%; 
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: green; 
+    color: black; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%; 
+}
+
+button:hover {
+    background-color: darkgreen; 
+}
+
+.message {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333; 
+}
+
+
+
+
+
+
+
+
+
+
+function verificarNome() {
+    const nomeField = document.getElementById('nome');
+    const nome = nomeField.value.trim();
+    const mensagemDiv = document.getElementById('mensagem');
+
+    if (nome === '') {
+        mensagemDiv.textContent = 'Por Favor, insira seu nome.';
+        mensagemDiv.style.color = 'red'; 
+    } else {
+        mensagemDiv.textContent = 'Olá, ' + nome + '!';
+        mensagemDiv.style.color = 'green';
+    }
+}
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
