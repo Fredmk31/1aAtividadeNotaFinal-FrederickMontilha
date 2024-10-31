@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Página Pessoal</title>
+</head>
+<body>
+    <header>
+        <h1>Minha Página Pessoal</h1>
+    </header>
+    <main>
+        <section id="informacoes-pessoais">
+            <h2>Informações Pessoais</h2>
+            <p><strong>Nome:</strong> Frederick Montilha Kall</p>
+            <p><strong>Matrícula:</strong> 202403896321</p>
+            <p><strong>Curso:</strong> Ciência da Computação</p>
+            <p><strong>Universidade:</strong> Estácio de Sá</p>
+        </section>
+
+        <section id="sobre-o-curso">
+            <h2>Sobre o Curso</h2>
+            <p>Atualmente, estou cursando <em>Ciência da Computação</em> na <em>Estácio de Sá</em>. Este curso me proporciona uma base sólida em programaçãoem diversos tipo de linguagens. Estou particularmente interessado em ser um bom programador.</p>
+        </section>
+
+        <section id="objetivo-profissional">
+            <h2>Objetivo Profissional</h2>
+            <p>Meu objetivo profissional é conseguir um emprego estável. Pretendo utilizar os conhecimentos adquiridos para melhorar meu desenpenho profissional.</p>
+        </section>
+
+        <section id="contato">
+            <h2>Contato</h2>
+            <p><strong>Email:</strong> fredmontilhakall@gmail.com</p>
+          </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 - Frederick </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+========================================================
+CSS
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: blue;
+}
+header {
+    background: #333;
+    color:white;
+    padding: 10px 0;
+    text-align: center;
+}
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background:white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+h2 {
+    color: #333;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #333;
+    color:white;
+}
