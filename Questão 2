@@ -1,11 +1,54 @@
-HTML
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: lightgray;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        h1 {
+            text-align: center;
+            color: black;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid red;
+        }
+
+        th {
+            background-color: darkblue;
+            color: white;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: lightgray;
+        }
+
+        tbody tr:hover {
+            background-color: lightblue;
+        }
+    </style>
     <title>Tabela de Produtos</title>
 </head>
 <body>
@@ -19,7 +62,7 @@ HTML
                     <th>Categoria</th>
                 </tr>
             </thead>
-            <body>
+            <tbody>
                 <tr>
                     <td>Headset Bluetooth</td>
                     <td>R$ 215,90</td>
@@ -27,7 +70,7 @@ HTML
                 </tr>
                 <tr>
                     <td>Iphone 15 pro max</td>
-                    <td>R$15.000,95</td>
+                    <td>R$ 15.000,95</td>
                     <td>Celular da marca Iphone</td>
                 </tr>
                 <tr>
@@ -36,67 +79,17 @@ HTML
                     <td>Placa de Vídeo da NVIDIA</td>
                 </tr>
                 <tr>
-                    <td>playstation 5</td>
-                    <td>R$ 3700,00</td>
+                    <td>Playstation 5</td>
+                    <td>R$ 3.700,00</td>
                     <td>Video game</td>
                 </tr>
                 <tr>
                     <td>Mouse e Teclado RGB gamer</td>
-                    <td>R$1500,00</td>
+                    <td>R$ 1.500,00</td>
                     <td>Kit gamer</td>
                 </tr>
-            </body>
+            </tbody>
         </table>
     </div>
 </body>
 </html>
-
-=================================================================
-css
-
-body {
-    font-family: Arial, sans-serif;
-    background-color:white;
-    margin: 0;
-    padding: 20px;
-}
-
-.container {
-    max-width: 800px;
-    margin: auto;
-    background: lightgray;
-    padding: 20px;
-    border-radius: 8px;
-  
-}
-
-h1 {
-    text-align: center;
-    color:black;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-th, td {
-    padding: 12px;
-    text-align: left;
-    border-bottom: 1px solid red;
-}
-
-th {
-    background-color:darkblue;
-    color:white;
-}
-
-tbody tr:nth-child(even) {
-    background-color:lightgray;
-}
-
-tbody tr:hover {
-    background-color:lightblue ;
-}
-
