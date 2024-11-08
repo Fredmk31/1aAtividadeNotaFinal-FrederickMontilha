@@ -1,11 +1,49 @@
-HTML
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="Exercicio1" content="ExercicioNotaFinal">
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: blue;
+        }
+
+        header {
+            background: black;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            color: black;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        a {
+            color: blue;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
     <title>Página Pessoal</title>
 </head>
 <body>
@@ -23,50 +61,20 @@ HTML
 
         <section id="sobre-o-curso">
             <h2>Sobre o Curso</h2>
-            <p>É um curso complexo mas acredito que com pratica da para torna-lo facil, alem dessa area possuir um mercado de trabalho bem abragente</p></p>
+            <p>É um curso complexo mas acredito que com prática dá para torná-lo fácil, além dessa área possuir um mercado de trabalho bem abrangente.</p>
         </section>
 
         <section id="objetivo-profissional">
             <h2>Objetivo Profissional</h2>
-            <p>Quero ter um bom emprego, nao quero ser necessariamente quero ser rico, mas quero ter uma vida estavel.</p>
+            <p>Quero ter um bom emprego, não quero ser necessariamente rico, mas quero ter uma vida estável.</p>
         </section>
 
         <section id="contato">
             <h2>Contato</h2>
-            <p><strong>GitHub:</strong> <a href="https://github.com/Fredmk31?tab=repositories">Meu GitHub</a></p>
+            <p><strong>GitHub:</strong> <a href="https://github.com/Fredmk31?tab=repositories" target="_blank">Meu GitHub</a></p>
             <p><strong>Email:</strong> fredmontilhakall@gmail.com</p>
-          </section>
+        </section>
     </main>
 </body>
-</html
+</html>
 
-========================================================
-CSS
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: blue;
-}
-header {
-    background:Black;
-    color:white;
-    padding: 10px 0;
-    text-align: center;
-}
-main {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background:white;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-h2 {
-    color: black;
-}
-
-section {
-    margin-bottom: 20px;
-}
