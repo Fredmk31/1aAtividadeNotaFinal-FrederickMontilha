@@ -1,12 +1,62 @@
-HTML
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name=Exercicio3" content="ExercicioNotaFinal">
+    <meta name="Exercicio3" content="ExercicioNotaFinal">
     <title>Formulário de Contato</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: lightgray;
+        }
+
+        h1 {
+            text-align: center;
+            color: black;
+        }
+
+        #contactForm {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px white;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin: 10px 0 5px;
+            color: dimgray;
+        }
+
+        input, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid lightgray;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: forestgreen;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: limegreen;
+        }
+    </style>
 </head>
 <body>
     <div>
@@ -24,104 +74,45 @@ HTML
             <button type="submit">Enviar</button>
         </form>
     </div>
-    <script src="script1.js"></script>
+    <script>
+        function validateForm() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            const phonePattern = /^\(\d{2}\) \d{5}-\d{4}$/;
+
+            if (!name) {
+                alert("Por favor, preencha o campo Nome.");
+                return false;
+            }
+
+            if (!email) {
+                alert("Por favor, preencha o campo Email.");
+                return false;
+            }
+
+            if (!emailPattern.test(email)) {
+                alert("Por favor, insira um endereço de email válido.");
+                return false;
+            }
+
+            if (!phone) {
+                alert("Por favor, preencha o campo Número de Telefone.");
+                return false;
+            }
+
+            if (!phonePattern.test(phone)) {
+                alert("Por favor, insira um número de telefone válido no formato (XX) XXXXX-XXXX.");
+                return false;
+            }
+
+            alert("Formulário enviado com sucesso!");
+            return true;
+        }
+    </script>
 </body>
 </html>
-==============================================
-
-CSS
-body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: lightgray;
-}
-
-h1 {
-    text-align: center;
-    color: black;
-}
-
-#contactForm {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px white;
-    width: 100%;
-    max-width: 400px;
-}
-
-label {
-    font-weight: bold;
-    display: block;
-    margin: 10px 0 5px;
-    color: dimgray;
-}
-
-input, textarea, button {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid lightgray;
-    border-radius: 4px;
-    font-size: 16px;
-}
-
-button {
-    background-color: forestgreen;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-button:hover {
-    background-color: limegreen;
-}
-
-
-===================================================
-
-JAVASCRIPT
-
-function validateForm() {
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const phone = document.getElementById('phone').value;
-    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    const phonePattern = /^\(\d{2}\) \d{5}-\d{4}$/;
-
-    if (!name) {
-        alert("Por favor, preencha o campo Nome.");
-        return false;
-    }
-
-    if (!email) {
-        alert("Por favor, preencha o campo Email.");
-        return false;
-    }
-
-    if (!emailPattern.test(email)) {
-        alert("Por favor, insira um endereço de email válido.");
-        return false;
-    }
-
-    if (!phone) {
-        alert("Por favor, preencha o campo Número de Telefone.");
-        return false;
-    }
-
-    if (!phonePattern.test(phone)) {
-        alert("Por favor, insira um número de telefone válido no formato (XX) XXXXX-XXXX.");
-        return false;
-    }
-
-    alert("Formulário enviado com sucesso!");
-    return true;
-}
 
 
 
