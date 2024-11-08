@@ -1,124 +1,127 @@
+HTML
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <meta name=Exercicio3" content="ExercicioNotaFinal">
     <title>Formulário de Contato</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
+    <div>
         <h1>Formulário de Contato</h1>
-        <form id="contactForm">
-            <div class="form-group">
-                <label for="name">Nome:</label>
-                <input type="text" id="name" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" required>
-            </div>
-            <div class="form-group">
-                <label for="message">Mensagem:</label>
-                <textarea id="message" required></textarea>
-            </div>
+        <form id="contactForm" onsubmit="return validateForm()">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+
+            <label for="phone">Número de Telefone:</label>
+            <input type="tel" id="phone" name="phone">
+
             <button type="submit">Enviar</button>
         </form>
-        <div id="messageBox" class="message"></div>
     </div>
-
-    <script src="script.js"></script>
+    <script src="script1.js"></script>
 </body>
 </html>
+==============================================
 
-
-
-
-
+CSS
 body {
     font-family: Arial, sans-serif;
-    background-color: lavender; /* Fundo do formulário */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     margin: 0;
-    padding: 20px;
-}
-
-.container {
-    max-width: 400px; 
-    margin: auto; 
-    padding: 20px;
-    background-color: beige; /* Cor de fundo do container */
-    border: 1px solid lightgray;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: lightgray;
 }
 
 h1 {
-    font-size: 30px;
-    color: brown; /* Cor do cabeçalho */
-    margin-bottom: 10px;
+    text-align: center;
+    color: black;
 }
 
-.form-group {
-    margin-bottom: 15px;
+#contactForm {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px white;
+    width: 100%;
+    max-width: 400px;
 }
 
 label {
+    font-weight: bold;
     display: block;
-    margin-bottom: 5px;
+    margin: 10px 0 5px;
+    color: dimgray;
 }
 
-input[type="text"], input[type="email"], textarea {
+input, textarea, button {
+    width: 100%;
     padding: 10px;
-    margin: 10px 0;
+    margin-bottom: 10px;
     border: 1px solid lightgray;
-    border-radius: 5px;
-    width: 100%; 
-    box-sizing: border-box;
+    border-radius: 4px;
+    font-size: 16px;
 }
 
 button {
-    padding: 10px 15px;
-    background-color: green; 
-    color: black; 
+    background-color: forestgreen;
+    color: white;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
-    width: 100%; 
+    font-weight: bold;
 }
 
 button:hover {
-    background-color: darkgreen; 
-}
-
-.message {
-    margin-top: 20px;
-    font-size: 18px;
-    color: #333; 
+    background-color: limegreen;
 }
 
 
+===================================================
 
+JAVASCRIPT
 
+function validateForm() {
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    const phonePattern = /^\(\d{2}\) \d{5}-\d{4}$/;
 
-
-
-
-
-
-function verificarNome() {
-    const nomeField = document.getElementById('nome');
-    const nome = nomeField.value.trim();
-    const mensagemDiv = document.getElementById('mensagem');
-
-    if (nome === '') {
-        mensagemDiv.textContent = 'Por Favor, insira seu nome.';
-        mensagemDiv.style.color = 'red'; 
-    } else {
-        mensagemDiv.textContent = 'Olá, ' + nome + '!';
-        mensagemDiv.style.color = 'green';
+    if (!name) {
+        alert("Por favor, preencha o campo Nome.");
+        return false;
     }
+
+    if (!email) {
+        alert("Por favor, preencha o campo Email.");
+        return false;
+    }
+
+    if (!emailPattern.test(email)) {
+        alert("Por favor, insira um endereço de email válido.");
+        return false;
+    }
+
+    if (!phone) {
+        alert("Por favor, preencha o campo Número de Telefone.");
+        return false;
+    }
+
+    if (!phonePattern.test(phone)) {
+        alert("Por favor, insira um número de telefone válido no formato (XX) XXXXX-XXXX.");
+        return false;
+    }
+
+    alert("Formulário enviado com sucesso!");
+    return true;
 }
-});
 
 
 
